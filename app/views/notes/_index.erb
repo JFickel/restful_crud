@@ -1,0 +1,9 @@
+<h3>All Notes:</h3>
+
+<% @notes.each do |note| %>
+  <% user = User.find_by_id(note.user_id) %>
+  <h4><%= note.title %><p></h4><span><a class="show_user" href="/users/<%= note.user_id %>"><%= "#{user.first_name} #{user.last_name}" %></a></span>
+  <br>
+  <%= note.content %>
+
+<% end %>

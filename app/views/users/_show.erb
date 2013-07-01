@@ -1,0 +1,8 @@
+<h1><%= @user.first_name %>'s Notes</h1>
+<br>
+<% @user.notes.each do |note| %>
+  <h3><%= note.title %><p></h3>
+  <br>
+  <%= note.content %>
+<% end %>
+<br>

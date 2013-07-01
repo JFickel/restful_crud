@@ -1,11 +1,11 @@
 get '/users' do 
   @users = User.all
-  erb :'/users/index'
+  erb :'/users/_index', layout: false
 end
 
 get '/users/:id' do |id|
-  @user = User.find_by(id: id)
-  erb :'/users/show'
+  @user = User.where(id: id).first
+  erb :'/users/_show', layout: false
 end
 
 post '/users' do
@@ -13,7 +13,7 @@ post '/users' do
 end
 
 put '/users/:id' do |id|
-  
+
 end
 
 delete '/users/:id' do |id|

@@ -1,0 +1,11 @@
+<h3>Users:</h3>
+
+<% @users.each do |user| %>
+  <br>
+  <%= user.first_name %>
+  <%= user.last_name %>
+  <a class="show_user" href="/users/<%= user.id %>">My Notes</a>
+  <br>
+  <%= user.email %>
+  <br>
+<% end %>

@@ -7,3 +7,12 @@
 th {
   text-align: left;
 }
+
+.nav_headers {
+  float:left;
+  padding-right: 50px;
+}
+
+div {
+  clear:both;
+}
